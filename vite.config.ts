@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     // Use relative base path to ensure assets load correctly on both local dev and GitHub Pages
     // regardless of the repository name or path.
-    base: './', 
+    base: '/portfolio/',
     define: {
       // This exposes the API_KEY from your .env file to the client-side code
       'process.env.API_KEY': JSON.stringify(env.API_KEY)
