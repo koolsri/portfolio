@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="relative mx-auto md:mr-0">
-          <div className="w-64 h-64 md:w-80 md:h-80 relative">
+          <div className="w-80 h-80 md:w-96 md:h-96 relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full opacity-20 blur-2xl animate-pulse"></div>
             {/* Profile Image */}
             <img
