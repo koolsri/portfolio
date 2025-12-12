@@ -17,7 +17,8 @@ export const HERO_IMAGES = [
   "images/google-blue-shirt.jpg",
   "images/google-wooden.jpg",
   "images/google-green.jpg",
-  "images/speaking.jpg"
+  "images/speaking.jpg",
+  "images/google-white-shirts.jpg"
 ];
 
 export const SKILLS: Skill[] = [
