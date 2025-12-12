@@ -8,7 +8,7 @@ const getGenAI = () => {
   if (!genAI) {
     // Ideally this comes from process.env.API_KEY.
     // For this specific environment, we assume it's available.
-    const apiKey = process.env.API_KEY;
+    const apiKey = import.meta.env.VITE_API_KEY;
     if (apiKey) {
       genAI = new GoogleGenAI({ apiKey });
     } else {
@@ -31,14 +31,14 @@ export const sendMessageToGemini = async (
     // Construct a chat history formatted for the model
     // Note: This is a simplified stateless approach for the demo.
     // A more robust app would use ai.chats.create({ history: ... })
-    
+
     // We will use generateContent with the system instruction and the user's latest message context
     // For a simple QA bot, single-turn with context is often sufficient, 
     // but let's try to maintain a bit of conversation flow by appending previous context.
 
     const conversationContext = history
-        .map(msg => `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.text}`)
-        .join('\n');
+      .map(msg => `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.text}`)
+      .join('\n');
 
     const fullPrompt = `
       ${conversationContext}
