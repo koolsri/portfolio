@@ -90,7 +90,7 @@ export const PROJECTS: Project[] = [
     title: "AI-Driven Customer Success",
     description: "Led AI-driven customer success initiatives leveraging Gemini and Workspace to drive productivity and value realization, earning the MVP Award (Q2 2025).",
     tags: ["Gemini", "Vertex AI", "Customer Success"],
-    imageUrl: "https://picsum.photos/600/400?random=10",
+    imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     link: "#",
     github: "#"
   },
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
     title: "High-Scale Event Architecture",
     description: "Orchestrated critical support and infrastructure scaling for major retail clients during Black Friday/Cyber Monday, supporting $250M+ in sales over 5 days.",
     tags: ["Scalability", "GKE", "Risk Management"],
-    imageUrl: "https://picsum.photos/600/400?random=11",
+    imageUrl: "https://images.unsplash.com/photo-1558494949-efc535b5c47c?auto=format&fit=crop&w=800&q=80",
     link: "#",
     github: "#"
   },
@@ -108,7 +108,7 @@ export const PROJECTS: Project[] = [
     title: "Enterprise Cloud Migrations",
     description: "Designed and executed complex Server-to-Cloud migrations for Atlassian enterprise customers, achieving 40% faster timelines and zero critical post-launch issues.",
     tags: ["Cloud Migration", "Jira", "Confluence"],
-    imageUrl: "https://picsum.photos/600/400?random=12",
+    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     link: "#",
     github: "#"
   }
