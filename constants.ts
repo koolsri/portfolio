@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
     title: "High-Scale Event Architecture",
     description: "Orchestrated critical support and infrastructure scaling for major retail clients during Black Friday/Cyber Monday, supporting $250M+ in sales over 5 days.",
     tags: ["Scalability", "GKE", "Risk Management"],
-    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/CERN_Server_03.jpg/800px-CERN_Server_03.jpg",
     link: "#",
     github: "#"
   },
