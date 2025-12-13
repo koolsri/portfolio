@@ -1,28 +1,8 @@
 import React from 'react';
 import { SectionId } from '../types';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = React.useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = `Contact from Portfolio (${formData.name})`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-    window.location.href = `mailto:sriikumarp@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
     <section id={SectionId.CONTACT} className="py-20 scroll-mt-24 bg-white dark:bg-dark-lighter/30 relative overflow-hidden">
       {/* Decorative element */}
@@ -66,52 +46,20 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4 bg-slate-50 dark:bg-dark p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-600 dark:text-slate-400">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder-slate-400 dark:placeholder-slate-600"
-                  placeholder="Jane Doe"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-600 dark:text-slate-400">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder-slate-400 dark:placeholder-slate-600"
-                  placeholder="jane@example.com"
-                />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-600 dark:text-slate-400">Message</label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={4}
-                className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none placeholder-slate-400 dark:placeholder-slate-600"
-                placeholder="I'd like to discuss...">
-              </textarea>
-            </div>
-
-            <button type="submit" className="w-full bg-primary hover:bg-indigo-600 text-white font-bold py-4 rounded-lg transition-all flex items-center justify-center gap-2 group shadow-lg shadow-primary/25 cursor-pointer">
-              Send Message
-              <Send size={18} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-          </form>
+          <div className="bg-slate-50 dark:bg-dark p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSd311R-xbpLl5nEljmYl4w84ZRsyrzXq99Oz_dUkVaZQTkoLw/viewform?embedded=true"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              title="Contact Form"
+              className="w-full"
+            >
+              Loading…
+            </iframe>
+          </div>
         </div>
       </div>
     </section>
