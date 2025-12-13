@@ -2,6 +2,7 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Certifications from './components/Certifications';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
@@ -16,13 +17,14 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Certifications />
         <Experience />
         <Projects />
         <Education />
         <Contact />
       </main>
       <Footer />
-      
+
       {/* Floating AI Assistant - The Key Feature */}
       <AIChat />
     </div>

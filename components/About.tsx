@@ -1,7 +1,7 @@
 import React from 'react';
-import { PROFILE_BIO, SKILLS, CERTIFICATIONS } from '../constants';
+import { PROFILE_BIO, SKILLS } from '../constants';
 import { SectionId } from '../types';
-import { CheckCircle2, ExternalLink } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -52,35 +52,6 @@ const About: React.FC = () => {
                 </div>
               </div>
             ))}
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                Certifications
-              </h3>
-              <div className="space-y-3">
-                {CERTIFICATIONS.map((cert, idx) => (
-                  <a
-                    key={idx}
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:border-primary/50 hover:shadow-md transition-all group"
-                  >
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
-                          {cert.name}
-                        </h4>
-                        <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-                          {cert.issuer} • {cert.date}
-                        </p>
-                      </div>
-                      <ExternalLink size={16} className="text-slate-400 group-hover:text-primary transition-colors" />
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
