@@ -1,4 +1,4 @@
-import { Experience, Project, Skill, EducationItem } from './types';
+import { Experience, Project, Skill, EducationItem, Certification } from './types';
 
 export const PROFILE_NAME = "Sri Kumar Padmanabhan";
 export const PROFILE_TITLE = "Customer Success Leader & TAM";
@@ -31,8 +31,47 @@ export const SKILLS: Skill[] = [
     items: ["Google Cloud (Compute, GKE, Vertex AI)", "Jira & Confluence", "SQL & Data Analytics (Looker)", "SaaS Migrations", "Cloud Monitoring"]
   },
   {
-    category: "AI & Certifications",
-    items: ["Generative AI Leader", "Pro Cloud Architect", "Pro DevOps Engineer", "Prompt Engineering", "Gemini Ecosystem", "Nano banana Pro", "Imagen", "Veo", "Lyria"]
+    category: "AI & Technologies",
+    items: ["Prompt Engineering", "Gemini Ecosystem", "Nano banana Pro", "Imagen", "Veo", "Lyria"]
+  }
+];
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    name: "Generative AI Leader",
+    issuer: "Credly",
+    date: "Valid Till June, 2028",
+    link: "https://www.credly.com/badges/37b495b6-2163-4973-b9cc-e944b876295f"
+  },
+  {
+    name: "Google Prompting Essentials V1",
+    issuer: "Google",
+    date: "Issued January, 2025",
+    link: "https://www.credly.com/badges/3f710f1e-1444-44f6-aea1-6fb5dfb08106"
+  },
+  {
+    name: "Professional Cloud DevOps Engineer",
+    issuer: "Google Cloud",
+    date: "Valid till October, 2026",
+    link: "https://www.credly.com/badges/0549fd4f-f21c-4bbf-be02-e11a427593b3"
+  },
+  {
+    name: "Cloud Digital Leader",
+    issuer: "Google Cloud",
+    date: "Valid till July, 2028",
+    link: "https://www.credly.com/badges/6a03c4a6-b46f-4396-9925-528422a8b289"
+  },
+  {
+    name: "Professional Cloud Architect",
+    issuer: "Google Cloud",
+    date: "Valid till July, 2027",
+    link: "https://www.credly.com/badges/706faf8c-6858-4c10-85d2-2653ef7fa266"
+  },
+  {
+    name: "Google Cloud Skills Boost Collections",
+    issuer: "Google Cloud",
+    date: "Verified Profile",
+    link: "https://www.cloudskillsboost.google/public_profiles/a7cfd4aa-05db-4f46-9ae4-ff830099dd69"
   }
 ];
 
@@ -135,8 +174,11 @@ Name: ${PROFILE_NAME}
 Title: ${PROFILE_TITLE}
 Bio: ${PROFILE_BIO}
 
-Skills & Certifications:
+Skills:
 ${SKILLS.map(s => `${s.category}: ${s.items.join(', ')}`).join('\n')}
+
+Certifications:
+${CERTIFICATIONS.map(c => `${c.name} (${c.issuer}, ${c.date})`).join('\n')}
 
 Experience:
 ${EXPERIENCE.map(e => `${e.role} at ${e.company} (${e.period}). Highlights: ${e.description.join(' ')}`).join('\n')}

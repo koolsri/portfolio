@@ -29,6 +29,14 @@ export interface EducationItem {
   grade: string;
 }
 
+export interface Certification {
+  name: string;
+  issuer: string;
+  date: string;
+  link: string;
+  image?: string;
+}
+
 export interface ChatMessage {
   role: 'user' | 'model';
   text: string;
