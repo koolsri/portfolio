@@ -1,5 +1,5 @@
 import { Experience, Project, Skill, EducationItem, Certification } from './types';
-import project2Img from './assets/project-2.jpg';
+import project2Img from './assets/project-2.png';
 
 export const PROFILE_NAME = "Sri Kumar Padmanabhan";
 export const PROFILE_TITLE = "Customer Success Leader & TAM";
